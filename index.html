@@ -4,12 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Basic SEO -->
+    <title>SkyCast Weather | Live Weather & 7-Day Forecast</title>
+
+    <meta name="description" content="Check live weather conditions, hourly forecasts, 7-day weather predictions, air quality, humidity, wind speed and weather advisories with SkyCast Weather.">
+
+    <meta name="keywords" content="SkyCast Weather, live weather, weather forecast, Kigali weather, hourly forecast, 7-day forecast, air quality, temperature">
+
+    <meta name="author" content="SkyCast Weather">
+    <meta name="robots" content="index, follow">
+
+    <!-- Website URL -->
+    <link rel="canonical" href="https://gsuhaibu-coder.github.io/skycast-weather/">
+
+    <!-- Social Media Preview -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="SkyCast Weather | Live Weather Forecast">
+    <meta property="og:description" content="Explore current weather, hourly forecasts, 7-day predictions and air quality with SkyCast Weather.">
+    <meta property="og:url" content="https://gsuhaibu-coder.github.io/skycast-weather/">
+    <meta property="og:site_name" content="SkyCast Weather">
+
+    <!-- Browser Theme -->
     <meta name="theme-color" content="#071426">
-    <meta name="description" content="SkyCast Weather gives you current weather, hourly forecasts, air quality and a seven-day forecast.">
-    <title>SkyCast Weather</title>
+
+    <!-- Favicon (we'll add our own icon later) -->
+    <link rel="icon" href="favicon.ico">
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
     <header class="header">
         <div class="brand">
             <span class="brand-icon">☀</span>
@@ -19,9 +46,17 @@
     </header>
 
     <main class="container">
+
         <section class="search-section">
             <form id="searchForm">
-                <input id="cityInput" type="text" placeholder="Search for a city..." autocomplete="off" required>
+                <input
+                    id="cityInput"
+                    type="text"
+                    placeholder="Search for a city..."
+                    autocomplete="off"
+                    required
+                    aria-label="Search for a city"
+                >
                 <button id="searchBtn" type="submit">Search</button>
             </form>
 
@@ -39,6 +74,7 @@
                     <h2 id="cityName">Loading weather...</h2>
                     <p id="currentDate" class="muted">Please wait...</p>
                 </div>
+
                 <div class="unit-switch" aria-label="Temperature unit">
                     <button id="celsiusBtn" class="unit-btn active" type="button">°C</button>
                     <button id="fahrenheitBtn" class="unit-btn" type="button">°F</button>
@@ -51,6 +87,7 @@
                         <div id="weatherIcon" class="weather-icon">🌤️</div>
                         <p id="weatherDescription" class="weather-description">Loading conditions...</p>
                     </div>
+
                     <div class="temperature-area">
                         <h1 id="temperature">--°C</h1>
                         <p id="feels">Feels like --°C</p>
@@ -62,10 +99,12 @@
                         <span>💧 Humidity</span>
                         <h3 id="humidity">--%</h3>
                     </div>
+
                     <div class="detail">
                         <span>💨 Wind speed</span>
                         <h3 id="wind">-- km/h</h3>
                     </div>
+
                     <div class="detail">
                         <span>🌧️ Rain</span>
                         <h3 id="rain">--%</h3>
@@ -75,6 +114,7 @@
         </section>
 
         <section class="info-grid">
+
             <article class="info-card">
                 <p class="eyebrow">SUNRISE</p>
                 <div class="info-main">
@@ -101,6 +141,7 @@
                     </div>
                 </div>
             </article>
+
         </section>
 
         <section class="alerts-section">
@@ -110,10 +151,14 @@
                     <h2>Weather advisories</h2>
                 </div>
             </div>
+
             <div id="alertsContainer" class="alerts-container">
                 <p class="muted">Checking weather conditions...</p>
             </div>
-            <p class="disclaimer">These are automated weather advisories, not official emergency alerts.</p>
+
+            <p class="disclaimer">
+                These are automated weather advisories, not official emergency alerts.
+            </p>
         </section>
 
         <section class="hourly-section">
@@ -123,6 +168,7 @@
                     <h2>Hourly forecast</h2>
                 </div>
             </div>
+
             <div id="hourlyContainer" class="hourly-container">
                 <p class="muted">Loading hourly forecast...</p>
             </div>
@@ -135,17 +181,25 @@
                     <h2>7-day forecast</h2>
                 </div>
             </div>
+
             <div id="forecastContainer" class="forecast-container">
                 <p class="muted">Loading forecast...</p>
             </div>
         </section>
+
     </main>
 
     <footer>
-        <p>© 2026 SkyCast Weather</p>
-        <p>Weather data: <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a></p>
+        <p>© 2026 SkyCast Weather. All rights reserved.</p>
+        <p>
+            Weather data:
+            <a href="https://open-meteo.com/" target="_blank" rel="noopener">
+                Open-Meteo
+            </a>
+        </p>
     </footer>
 
     <script src="script.js"></script>
+
 </body>
 </html>
