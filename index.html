@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#071426">
+    <meta name="description" content="SkyCast Weather gives you current weather, hourly forecasts, air quality and a seven-day forecast.">
+    <title>SkyCast Weather</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="brand">
+            <span class="brand-icon">☀</span>
+            <h1>SkyCast <span>Weather</span></h1>
+        </div>
+        <p>Your weather, your world.</p>
+    </header>
+
+    <main class="container">
+        <section class="search-section">
+            <form id="searchForm">
+                <input id="cityInput" type="text" placeholder="Search for a city..." autocomplete="off" required>
+                <button id="searchBtn" type="submit">Search</button>
+            </form>
+
+            <button id="locationBtn" class="location-btn" type="button">
+                <span>◎</span> Use my current location
+            </button>
+
+            <p id="message" role="status" aria-live="polite"></p>
+        </section>
+
+        <section class="current-section">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">CURRENT CONDITIONS</p>
+                    <h2 id="cityName">Loading weather...</h2>
+                    <p id="currentDate" class="muted">Please wait...</p>
+                </div>
+                <div class="unit-switch" aria-label="Temperature unit">
+                    <button id="celsiusBtn" class="unit-btn active" type="button">°C</button>
+                    <button id="fahrenheitBtn" class="unit-btn" type="button">°F</button>
+                </div>
+            </div>
+
+            <div class="weather-card">
+                <div class="main-weather">
+                    <div>
+                        <div id="weatherIcon" class="weather-icon">🌤️</div>
+                        <p id="weatherDescription" class="weather-description">Loading conditions...</p>
+                    </div>
+                    <div class="temperature-area">
+                        <h1 id="temperature">--°C</h1>
+                        <p id="feels">Feels like --°C</p>
+                    </div>
+                </div>
+
+                <div class="weather-details">
+                    <div class="detail">
+                        <span>💧 Humidity</span>
+                        <h3 id="humidity">--%</h3>
+                    </div>
+                    <div class="detail">
+                        <span>💨 Wind speed</span>
+                        <h3 id="wind">-- km/h</h3>
+                    </div>
+                    <div class="detail">
+                        <span>🌧️ Rain</span>
+                        <h3 id="rain">--%</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="info-grid">
+            <article class="info-card">
+                <p class="eyebrow">SUNRISE</p>
+                <div class="info-main">
+                    <span class="info-icon">🌅</span>
+                    <h3 id="sunrise">--:--</h3>
+                </div>
+            </article>
+
+            <article class="info-card">
+                <p class="eyebrow">SUNSET</p>
+                <div class="info-main">
+                    <span class="info-icon">🌇</span>
+                    <h3 id="sunset">--:--</h3>
+                </div>
+            </article>
+
+            <article class="info-card">
+                <p class="eyebrow">AIR QUALITY</p>
+                <div class="info-main">
+                    <span class="info-icon">🌿</span>
+                    <div>
+                        <h3 id="aqi">--</h3>
+                        <p id="aqiDescription" class="muted">Loading...</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section class="alerts-section">
+            <div class="section-title">
+                <div>
+                    <p class="eyebrow">WEATHER WATCH</p>
+                    <h2>Weather advisories</h2>
+                </div>
+            </div>
+            <div id="alertsContainer" class="alerts-container">
+                <p class="muted">Checking weather conditions...</p>
+            </div>
+            <p class="disclaimer">These are automated weather advisories, not official emergency alerts.</p>
+        </section>
+
+        <section class="hourly-section">
+            <div class="section-title">
+                <div>
+                    <p class="eyebrow">THE NEXT 12 HOURS</p>
+                    <h2>Hourly forecast</h2>
+                </div>
+            </div>
+            <div id="hourlyContainer" class="hourly-container">
+                <p class="muted">Loading hourly forecast...</p>
+            </div>
+        </section>
+
+        <section class="forecast-section">
+            <div class="section-title">
+                <div>
+                    <p class="eyebrow">PLAN AHEAD</p>
+                    <h2>7-day forecast</h2>
+                </div>
+            </div>
+            <div id="forecastContainer" class="forecast-container">
+                <p class="muted">Loading forecast...</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 SkyCast Weather</p>
+        <p>Weather data: <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
