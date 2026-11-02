@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gsuhaibu-coder.github.io/skycast-weather/sitemap.xml
